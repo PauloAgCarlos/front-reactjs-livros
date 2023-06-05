@@ -1,10 +1,12 @@
-import React, { useState, useNavigate } from 'react';
+import React, { useState } from 'react';
+
+import { useNavigate } from 'react-router-dom';
 
 import {ControleEditora} from './controle/ControleEditora'
 import {ControleLivros} from './controle/ControleLivros'
 
 export default function LivroDados() {
-  const [codEditora, setCodEditora] = useState(0);
+  const [codEditora, setCodEditora] = useState(1);
   const [titulo, setTitulo] = useState('');
   const [resumo, setResumo] = useState('');
   const [autores, setAutores] = useState('');
@@ -17,7 +19,7 @@ export default function LivroDados() {
     text: editora.nome,
   }));
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   const tratarCombo = (event) => {
     const { value } = event.target;

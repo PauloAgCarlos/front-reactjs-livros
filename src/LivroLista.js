@@ -17,7 +17,7 @@ function LinhaLivro({ livro, excluir }) {
   return (
     <tr>
       <td>
-        <button onClick={() => excluir(livro.codigo)}>Excluir</button>
+        <button className='btn btn-danger' onClick={() => excluir(livro.codigo)}>Excluir</button>
       </td>
       <td>{livro.codigo}</td>
       <td>{livro.titulo}</td>
